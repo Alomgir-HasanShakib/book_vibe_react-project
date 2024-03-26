@@ -1,0 +1,80 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "image": "https://i.postimg.cc/Gt5KsbnF/3bcfd9c77441e2cf5d6ab35d6cfaca63.png",
+    "review": "A masterpiece capturing the essence of the Jazz Age, its decadence, and the elusive American Dream.",
+    "totalPages": 180,
+    "rating": 4.5,
+    "category": "Fiction",
+    "tags": ["Classics", "Romance"],
+    "publisher": "Charles Scribner's Sons",
+    "yearOfPublishing": 1925
+  },
+  {
+    "bookId": 2,
+    "bookName": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "image": "https://i.postimg.cc/FK4ZSP8B/4f3957e8f023d8d60bae77fda6c15279.png",
+    "review": "A poignant exploration of racial injustice, moral growth, and the innocence of childhood in the American South.",
+    "totalPages": 324,
+    "rating": 4.8,
+    "category": "Fiction",
+    "tags": ["Classics", "Social Justice"],
+    "publisher": "J. B. Lippincott & Co.",
+    "yearOfPublishing": 1960
+  },
+  {
+    "bookId": 3,
+    "bookName": "The Hitchhiker's Guide to the Galaxy",
+    "author": "Douglas Adams",
+    "image": "https://i.postimg.cc/2SvGVpcW/642f797cd362e163b10280a18e873752.png",
+    "review": "An absurd and hilarious journey through space, filled with wit, satire, and existential musings.",
+    "totalPages": 224,
+    "rating": 4.4,
+    "category": "Science Fiction",
+    "tags": ["Humor", "Adventure"],
+    "publisher": "Pan Books",
+    "yearOfPublishing": 1979
+  },
+  {
+    "bookId": 4,
+    "bookName": "1984",
+    "author": "George Orwell",
+    "image": "https://i.postimg.cc/nLG1G4tc/704abe9e421fa597d747e8b4e9bbcfb3.png",
+    "review": "A chilling dystopian vision of a totalitarian regime, exploring themes of surveillance, oppression, and resistance.",
+    "totalPages": 328,
+    "rating": 4.6,
+    "category": "Fiction",
+    "tags": ["Dystopian", "Political"],
+    "publisher": "Secker & Warburg",
+    "yearOfPublishing": 1949
+  },
+  {
+    "bookId": 5,
+    "bookName": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "image": "https://i.postimg.cc/3JknQ02n/banner.png",
+    "review": "A poignant portrayal of adolescent angst and alienation, capturing the complexities of growing up.",
+    "totalPages": 234,
+    "rating": 4.3,
+    "category": "Fiction",
+    "tags": ["Coming of Age", "Literary Fiction"],
+    "publisher": "Little, Brown and Company",
+    "yearOfPublishing": 1951
+  },
+  {
+    "bookId": 6,
+    "bookName": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "image": "https://i.postimg.cc/7PsmRnJ5/fdd0e218554fda4443af36899ee3aa12.png",
+    "review": "A delightful and adventurous tale set in Middle-earth, filled with magic, creatures, and epic quests.",
+    "totalPages": 304,
+    "rating": 4.7,
+    "category": "Fantasy",
+    "tags": ["Adventure", "Epic Fantasy"],
+    "publisher": "George Allen & Unwin",
+    "yearOfPublishing": 1937
+  }
+]
