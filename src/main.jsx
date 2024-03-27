@@ -7,6 +7,7 @@ import Books from "./Componants/Books/Books.jsx";
 import Home from "./Componants/Home/Home.jsx";
 import ReadPage from "./Componants/ReadPage/ReadPage.jsx";
 import BookDetails from "./Componants/BookDetails/BookDetails.jsx";
+import BookList from "./Componants/BookList/BookList.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,12 +24,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/listedbook",
-        element: <Books></Books>,
+        element: <BookList></BookList>,
+        loader: () => fetch("/data.json"),
       },
       {
         path: "/bookDetails/:id",
         element: <BookDetails></BookDetails>,
-        loader:() => fetch("/data.json")
+        loader: () => fetch("/data.json"),
       },
     ],
   },

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ReadPage = () => {
-  return (
-    <div>ReadPage</div>
-  )
-}
+  return <div></div>;
+};
 
-export default ReadPage
+export default ReadPage;

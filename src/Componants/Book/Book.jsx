@@ -11,7 +11,7 @@ const Book = ({ book }) => {
           <figure className="bg-[#F3F3F3] rounded-lg p-10">
             <img src={image} alt="" className="w-28" />
           </figure>
-          <div className="card-body sans mt-6">
+          <div className=" sans mt-6">
             <div>
               {tags.map((tag, idx) => (
                 <span
@@ -29,7 +29,7 @@ const Book = ({ book }) => {
               By: {author}
             </p>
             <hr />
-            <div className="card-actions justify-end">
+            <div className="card-actions justify-between mt-3">
               <p className="text-[16px] font-medium text-[#131313CC]">
                 {category}
               </p>

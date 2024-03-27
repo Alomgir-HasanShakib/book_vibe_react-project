@@ -4,7 +4,7 @@ import Books from "../Books/Books";
 
 const Home = () => {
   return (
-    <div>
+    <div className="px-2">
       <Banner></Banner>
       <Books></Books>
     </div>

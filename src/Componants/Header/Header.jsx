@@ -6,7 +6,7 @@ const Header = () => {
       <li>
         <NavLink
           to="/"
-          style={({ isActive, isPending, isTransitioning }) => {
+          style={({ isActive, isTransitioning }) => {
             return {
               fontWeight: isActive ? "bold" : "",
               backgroundColor: isActive ? "transparent" : "",
@@ -22,7 +22,7 @@ const Header = () => {
       <li>
         <NavLink
           to="/listedbook"
-          style={({ isActive, isPending, isTransitioning }) => {
+          style={({ isActive, isTransitioning }) => {
             return {
               fontWeight: isActive ? "bold" : "",
               backgroundColor: isActive ? "transparent" : "",
@@ -38,7 +38,7 @@ const Header = () => {
       <li>
         <NavLink
           to="/readpage"
-          style={({ isActive, isPending, isTransitioning }) => {
+          style={({ isActive, isTransitioning }) => {
             return {
               fontWeight: isActive ? "bold" : "",
               backgroundColor: isActive ? "transparent" : "",
@@ -88,7 +88,9 @@ const Header = () => {
                 {links}
               </ul>
             </div>
-            <a className="btn btn-ghost text-[28px] font-bold">Book Vibe</a>
+            <a className="btn btn-ghost text-xl md:text-[28px] font-bold">
+              Book Vibe
+            </a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1 font-semibold text-xl">
@@ -96,14 +98,16 @@ const Header = () => {
             </ul>
           </div>
           <div className="navbar-end">
-            <a className="btn bg-[#23BE0A] px-7 text-white mr-6">Sign In</a>
-            <a className="btn bg-[#59C6D2] px-7 text-white">Sign Up</a>
+            <a className="btn bg-[#23BE0A] px-2 md:px-7 text-white mr-2 hover:bg-transparent hover:border-[#23BE0A] hover:text-[#23BE0A]">
+              Sign In
+            </a>
+            <a className="btn bg-[#59C6D2] px-2 md:px-7 hover:bg-transparent hover:border-[#59C6D2] hover:text-[#59C6D2] text-white">
+              Sign Up
+            </a>
           </div>
         </div>
       </nav>
       {/* =============================Banner================================ */}
-
-     
     </div>
   );
 };
