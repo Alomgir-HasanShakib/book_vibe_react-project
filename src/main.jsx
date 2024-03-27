@@ -8,11 +8,13 @@ import Home from "./Componants/Home/Home.jsx";
 import ReadPage from "./Componants/ReadPage/ReadPage.jsx";
 import BookDetails from "./Componants/BookDetails/BookDetails.jsx";
 import BookList from "./Componants/BookList/BookList.jsx";
+import ErrorPage from "./Componants/ErrorPage/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

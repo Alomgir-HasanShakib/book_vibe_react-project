@@ -1,7 +1,9 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import toast, { Toaster } from "react-hot-toast";
+// import toast, { Toaster } from "react-hot-toast";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { saveReadBook, saveWishList } from "../../Utilities/Localstorage";
-import { useState } from "react";
 
 const BookDetails = () => {
   const jobs = useLoaderData();
@@ -21,13 +23,13 @@ const BookDetails = () => {
   } = job;
 
   const handleReadButton = (id) => {
-    toast("You have already read this");
     saveReadBook(parseInt(id));
   };
   const handleWishtListBtn = (id) => {
-    toast("You have added this in wish list");
+    // toast("You have added this in wish list");
     saveWishList(parseInt(id));
   };
+
   return (
     <div className="mt-16 mb-16 px-3">
       <div className="card lg:card-side shadow-xl sans">
@@ -95,7 +97,8 @@ const BookDetails = () => {
             </button>
           </div>
         </div>
-        <Toaster />
+        {/* <Toaster /> */}
+        <ToastContainer />
       </div>
     </div>
   );

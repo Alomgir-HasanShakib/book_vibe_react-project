@@ -57,8 +57,8 @@ const Header = () => {
   return (
     <div>
       {/* =============================navbar================================ */}
-      <nav>
-        <div className="navbar bg-base-100 sans">
+      <nav className="shadow-md">
+        <div className="navbar bg-base-100 sans ">
           <div className="navbar-start">
             <div className="dropdown">
               <div
