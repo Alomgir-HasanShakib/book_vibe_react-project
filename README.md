@@ -1,7 +1,7 @@
-### Book Vibe
+# Book Vibe
 
 
-# Hi there is an web application about Books. Here are some features of this application is-
+## Hi there is an web application about Books. Here are some features of this application is-
 
 - You can view book details of any book you wnat
 - You can Adds Book to your read list or wishlisht
