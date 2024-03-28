@@ -3,12 +3,11 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Books from "./Componants/Books/Books.jsx";
 import Home from "./Componants/Home/Home.jsx";
-import ReadPage from "./Componants/ReadPage/ReadPage.jsx";
 import BookDetails from "./Componants/BookDetails/BookDetails.jsx";
 import BookList from "./Componants/BookList/BookList.jsx";
 import ErrorPage from "./Componants/ErrorPage/ErrorPage.jsx";
+import ReadPage from "./Componants/ReadPage/ReadPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,10 +19,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
       },
-      {
-        path: "/readpage",
-        element: <ReadPage></ReadPage>,
-      },
+
       {
         path: "/listedbook",
         element: <BookList></BookList>,
@@ -33,6 +29,11 @@ const router = createBrowserRouter([
         path: "/bookDetails/:id",
         element: <BookDetails></BookDetails>,
         loader: () => fetch("/data.json"),
+      },
+      {
+        path: "/readpage",
+        element: <ReadPage></ReadPage>,
+        loader: () => fetch("/data.json")
       },
     ],
   },
