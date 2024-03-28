@@ -9,6 +9,9 @@ import BookList from "./Componants/BookList/BookList.jsx";
 import ErrorPage from "./Componants/ErrorPage/ErrorPage.jsx";
 import ReadPage from "./Componants/ReadPage/ReadPage.jsx";
 
+import Contact from "./Componants/Contact/Contact.jsx";
+import About from "./Componants/About/About.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,7 +36,15 @@ const router = createBrowserRouter([
       {
         path: "/readpage",
         element: <ReadPage></ReadPage>,
-        loader: () => fetch("/data.json")
+        loader: () => fetch("/data.json"),
+      },
+      {
+        path: "/about",
+        element:<About></About>
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
       },
     ],
   },

@@ -104,7 +104,7 @@ const ReadPage = () => {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="bookName"  />
+          <XAxis dataKey="bookName" /> 
           <YAxis />
           <Bar
             dataKey="totalPages"

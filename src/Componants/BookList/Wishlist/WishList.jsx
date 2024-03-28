@@ -16,7 +16,7 @@ const WishList = ({ book }) => {
   } = book;
   return (
     <div>
-      <div className="card card-side bg-base-100 shadow-xl mt-10 p-6 mb-10 border-[#13131326] border">
+      <div className="flex flex-col md:flex-row card-side bg-base-100 shadow-xl mt-10 p-2 md:p-6 mb-10 border-[#13131326] border">
         <figure className="bg-[#1313130D] px-12 py-7 rounded-lg">
           <img className="w-28 h-40" src={image} alt="images" />
         </figure>
@@ -25,10 +25,13 @@ const WishList = ({ book }) => {
             {bookName}
           </h2>
           <p className="text-[#131313CC]">By : {author}</p>
-          <p className="flex gap-3 font-bold text-[#131313] items-center">
+          <p className="flex flex-col md:flex-row gap-1 md:gap-3 font-bold text-[#131313] items-center">
             Tags :
-            {tags.map((tag,idx) => (
-              <span key={idx} className="bg-[#23BE0A0D] text-[#23BE0A] px-4 py-2 rounded-full">
+            {tags.map((tag, idx) => (
+              <span
+                key={idx}
+                className="bg-[#23BE0A0D] text-[#23BE0A] px-2 md:px-4 py-1 md:py-2 rounded-full "
+              >
                 # {tag}
               </span>
             ))}
@@ -37,19 +40,22 @@ const WishList = ({ book }) => {
               {yearOfPublishing}
             </span>
           </p>
-          <p className="flex mr-2 text-[#13131399] items-center gap-4">
-            <PiUsers className="text-2xl" /> Publisher: {publisher}
-            <span className="flex items-center gap-2 ">
+          <p className="flex flex-col md:flex-row mr-2 text-[#13131399] items-center gap-4">
+            <span className="flex gap-1">
+              {" "}
+              <PiUsers className="text-2xl" /> Publisher: {publisher}
+            </span>
+            <span className="flex md:items-center gap-2 ">
               {" "}
               <MdOutlineContactPage className="text-2xl" />
               Pages: {totalPages}
             </span>
           </p>
           <div className="card-actions">
-            <button className="btn bg-[#328EFF26] hover:bg-transparent hover:border-[#328EFF] text-[#328EFF] rounded-full px-5 ">
+            <button className="btn bg-[#328EFF26] hover:bg-transparent hover:border-[#328EFF] text-[#328EFF] rounded-full px-1 md:px-5 ">
               Category: {category}
             </button>
-            <button className="btn bg-[#FFAC3326] hover:bg-transparent hover:border-[#FFAC33] text-[#FFAC33] rounded-full px-5 ">
+            <button className="btn bg-[#FFAC3326] hover:bg-transparent hover:border-[#FFAC33] text-[#FFAC33] rounded-full px-1 md:px-5 ">
               Rating: {rating}
             </button>
             <button className="btn hover:bg-transparent hover:border-[#23BE0A] hover:text-[#23BE0A] rounded-full px-5 primary-bg text-[18px] font-medium text-white">

@@ -51,6 +51,38 @@ const Header = () => {
           Pages to Read
         </NavLink>
       </li>
+      <li>
+      <NavLink
+          to="/about"
+          style={({ isActive, isTransitioning }) => {
+            return {
+              fontWeight: isActive ? "bold" : "",
+              backgroundColor: isActive ? "transparent" : "",
+              border: isActive ? "1px solid #23BE0A" : "",
+              color: isActive ? "#23BE0A" : "black",
+              viewTransitionName: isTransitioning ? "slide" : "",
+            };
+          }}
+        >
+          About
+        </NavLink>
+      </li>
+      <li>
+      <NavLink
+          to="/contact"
+          style={({ isActive, isTransitioning }) => {
+            return {
+              fontWeight: isActive ? "bold" : "",
+              backgroundColor: isActive ? "transparent" : "",
+              border: isActive ? "1px solid #23BE0A" : "",
+              color: isActive ? "#23BE0A" : "black",
+              viewTransitionName: isTransitioning ? "slide" : "",
+            };
+          }}
+        >
+          Contact
+        </NavLink>
+      </li>
     </>
   );
 

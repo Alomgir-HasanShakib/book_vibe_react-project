@@ -4,15 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.sans {
-  font-family: "Work Sans", sans-serif;
-}
 .fair-dis {
   font-family: "Playfair Display", serif;
 }
 .primary-bg {
   background-color: #23be0a;
 }
-.t-primary{
-  color: #23BE0A;
+.t-primary {
+  color: #23be0a;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
 }
