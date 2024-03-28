@@ -9,4 +9,4 @@ Currently, two official plugins are available:
 
 
 
--[this is test text for editing readme md file]
+- [this is test text for editing readme md file]
