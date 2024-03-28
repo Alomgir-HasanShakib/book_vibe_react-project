@@ -11,8 +11,9 @@ const BookList = () => {
   const books = useLoaderData();
   const [readedBooks, setReadedBooks] = useState([]);
   const [wishedBooks, setWishedBooks] = useState([]);
-  const [sortReadingBook, setSortReadingBook] = useState([]);
-  const [sortWishedBook, seSortedtWishedBook] = useState([]);
+
+  // const [sortReadingBook, setSortReadingBook] = useState([]);
+  // const [sortWishedBook, seSortedtWishedBook] = useState([]);
 
   useEffect(() => {
     const storedReadingBook = getStoredReadBook();
@@ -27,43 +28,40 @@ const BookList = () => {
       );
       setReadedBooks(readedBook);
       setWishedBooks(wishedBook);
-      setSortReadingBook(readedBook);
-      seSortedtWishedBook(wishedBook);
+      //   setSortReadingBook(readedBook);
+      //   seSortedtWishedBook(wishedBook);
     }
   }, []);
 
-  
-  const handleShortByRating = (method) => {
-    if (method === "pages") {
-      const pagesSort = readedBooks.sort((a, b) => b.totalPages - a.totalPages);
-      setSortReadingBook(pagesSort);
-    } else if (method == "rating") {
-      const ratingSort = readedBooks.sort((a, b) => a.rating - b.rating);
-      setSortReadingBook(ratingSort);
-    } else if (method === "year") {
-      const yearSort = readedBooks.sort(
-        (a, b) => b.yearOfPublishing - a.yearOfPublishing
-      );
-      setSortReadingBook(yearSort);
-    }
+  const handleShortByRating = () => {
+    const sortedReadBook = [...readedBooks].sort((a, b) => b.rating - a.rating);
+    const sortedWishedBook = [...wishedBooks].sort(
+      (a, b) => b.rating - a.rating
+    );
+    setWishedBooks(sortedWishedBook);
+    setReadedBooks(sortedReadBook);
+  };
+  const handleShortByPage = () => {
+    const sortedReadBook = [...readedBooks].sort(
+      (a, b) => b.totalPages - a.totalPages
+    );
+    const sortedWishedBook = [...wishedBooks].sort(
+      (a, b) => b.totalPages - a.totalPages
+    );
+    setReadedBooks(sortedReadBook);
+    setWishedBooks(sortedWishedBook);
+  };
+  const handleShortByYear = () => {
+    const sortedReadBook = [...readedBooks].sort(
+      (a, b) => b.yearOfPublishing - a.yearOfPublishing
+    );
+    const sortedWishedBook = [...wishedBooks].sort(
+      (a, b) => b.yearOfPublishing - a.yearOfPublishing
+    );
+    setWishedBooks(sortedWishedBook);
+    setReadedBooks(sortedReadBook);
   };
 
-
-
-  const handleWishlistSort = (method) => {
-    if (method === "pages") {
-      const pagesSort = readedBooks.sort((a, b) => b.totalPages - a.totalPages);
-      setWishedBooks(pagesSort);
-    } else if (method == "rating") {
-      const ratingSort = readedBooks.sort((a, b) => a.rating - b.rating);
-      setWishedBooks(ratingSort);
-    } else if (method === "year") {
-      const yearSort = readedBooks.sort(
-        (a, b) => b.yearOfPublishing - a.yearOfPublishing
-      );
-      setWishedBooks(yearSort);
-    }
-  };
   return (
     <div>
       {/* heading text  */}
@@ -79,14 +77,14 @@ const BookList = () => {
             Sort By
           </summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-            <li onClick={() => handleWishlistSort("rating")}>
-              <a onClick={() => handleShortByRating("rating")}>Rating</a>
+            <li>
+              <a onClick={handleShortByRating}>Rating</a>
             </li>
-            <li onClick={() => handleWishlistSort("pages")}>
-              <a onClick={() => handleShortByRating("pages")}>Number Of page</a>
+            <li>
+              <a onClick={handleShortByPage}>Number Of page</a>
             </li>
-            <li onClick={() => handleWishlistSort("year")}>
-              <a onClick={() => handleShortByRating("year")}>Published Year</a>
+            <li>
+              <a onClick={handleShortByYear}>Published Year</a>
             </li>
           </ul>
         </details>
@@ -107,7 +105,7 @@ const BookList = () => {
           className="tab-content bg-base-100 border-base-300 rounded-box p-6"
         >
           <div>
-            {sortReadingBook.map((readedbook) => (
+            {readedBooks.map((readedbook) => (
               <ReadedBook
                 key={readedbook.bookId}
                 readedbook={readedbook}
@@ -128,7 +126,7 @@ const BookList = () => {
           className="tab-content bg-base-100 border-base-300 rounded-box p-6"
         >
           <div>
-            {sortWishedBook.map((book) => (
+            {wishedBooks.map((book) => (
               <WishList key={book.bookId} book={book}></WishList>
             ))}
           </div>
