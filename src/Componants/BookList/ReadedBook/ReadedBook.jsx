@@ -1,9 +1,11 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { PiUsers } from "react-icons/pi";
 import { MdOutlineContactPage } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const ReadedBook = ({ readedbook }) => {
   const {
+    bookId,
     yearOfPublishing,
     publisher,
     tags,
@@ -58,9 +60,11 @@ const ReadedBook = ({ readedbook }) => {
             <button className="btn bg-[#FFAC3326] hover:bg-transparent hover:border-[#FFAC33] text-[#FFAC33] rounded-full px-1 md:px-5 ">
               Rating: {rating}
             </button>
-            <button className="btn hover:bg-transparent hover:border-[#23BE0A] hover:text-[#23BE0A] rounded-full px-5 primary-bg text-[18px] font-medium text-white">
-              View Details
-            </button>
+            <Link to={`/bookDetails/${bookId}`}>
+              <button className="btn hover:bg-transparent hover:border-[#23BE0A] hover:text-[#23BE0A] rounded-full px-5 primary-bg text-[18px] font-medium text-white">
+                View Details
+              </button>
+            </Link>
           </div>
         </div>
       </div>
